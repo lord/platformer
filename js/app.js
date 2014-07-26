@@ -17,6 +17,8 @@
     cat.position.y = 150;
 
     world.addChild(cat);
+
+    world.addChild(new Block());
     exports.stage = stage;
     exports.renderer = renderer;
   }
@@ -25,7 +27,8 @@
     requestAnimFrame(animate);
     renderer.render(stage);
     cat.rotation += 0.1;
-    world.position.x += 1;
+    world.position.x += 0.3;
+    world.position.y += 0.3;
   }
 
   window.addEventListener('load', function() {
