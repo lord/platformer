@@ -5,7 +5,7 @@
     renderer = PIXI.autoDetectRenderer(400, 300);
     document.body.appendChild(renderer.view);
 
-    var texture = PIXI.Texture.fromImage("/cat.png");
+    var texture = PIXI.Texture.fromImage("/img/cat.png");
     world = new PIXI.DisplayObjectContainer();
     stage.addChild(world);
     cat = new PIXI.Sprite(texture);
