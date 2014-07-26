@@ -1,0 +1,19 @@
+{
+  "name": "platformer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lord/platformer.git"
+  },
+  "author": "Robert Lord",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/lord/platformer/issues"
+  },
+  "homepage": "https://github.com/lord/platformer"
+}
