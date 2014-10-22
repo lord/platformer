@@ -1,6 +1,6 @@
 /**
  * @license
- * pixi.js - v1.6.0
+ * pixi.js - v1.6.1
  * Copyright (c) 2012-2014, Mat Groves
  * http://goodboydigital.com/
  *
@@ -2418,10 +2418,10 @@ PIXI.MovieClip.prototype.constructor = PIXI.MovieClip;
 * @readOnly
 */
 Object.defineProperty( PIXI.MovieClip.prototype, 'totalFrames', {
-  get: function() {
+    get: function() {
 
-    return this.textures.length;
-  }
+        return this.textures.length;
+    }
 });
 
 
@@ -4419,11 +4419,11 @@ PIXI.EventTarget = function () {
      * @method removeAllEventListeners
      * @param type {string} A string representing the event type which will have all its listeners removed
      */
-  this.removeAllEventListeners = function( type ) {
-    var a = listeners[type];
-    if (a)
-      a.length = 0;
-  };
+    this.removeAllEventListeners = function( type ) {
+        var a = listeners[type];
+        if (a)
+            a.length = 0;
+    };
 };
 
 /**
@@ -7268,7 +7268,7 @@ PIXI.WebGLStencilManager.prototype.bindGraphics = function(graphics, webGLData, 
 
 PIXI.WebGLStencilManager.prototype.popStencil = function(graphics, webGLData, renderSession)
 {
-  var gl = this.gl;
+    var gl = this.gl;
     this.stencilStack.pop();
    
     this.count--;
