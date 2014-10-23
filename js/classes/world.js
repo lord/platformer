@@ -2,7 +2,11 @@
 // all objects contain references to the stage.
 ;(function(exports) {
   var checkIfObjectsColliding = function(obj1, obj2) {
-    return true;
+    return (obj1.w && obj2.w && obj1.h && obj2.h &&
+            obj1.x < obj2.x + obj2.w &&
+            obj1.x + obj1.w > obj2.x &&
+            obj1.y < obj2.y + obj2.h &&
+            obj1.h + obj1.y > obj2.y);
   };
 
   var World = function() {

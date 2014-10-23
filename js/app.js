@@ -9,21 +9,29 @@
     stage.addChild(world);
 
     player = new Player();
-    player.position.x = 200;
-    player.position.y = 150;
+    player.position.x = 450;
+    player.position.y = 450;
 
+    var block = new Block();
+    block.position.x = 450;
+    block.position.y = 450;
+
+    world.addChild(block);
     world.addChild(player);
-    world.addChild(new Block());
     exports.stage = stage;
     exports.renderer = renderer;
   }
 
+  var time = 0;
   function animate() {
+    time++;
     requestAnimFrame(animate);
     renderer.render(stage);
-    player.rotation += 0.01;
+    player.x = Math.cos(time / 20) * 50 + 450;
+    player.y = Math.sin(time / 60) * 75 + 450;
+    player.alpha = 0.2;
     world.getCollidingObjects(player, function(other) {
-      console.log(other);
+      player.alpha = 1;
     });
     // world.position.x += 0.3;
     // world.position.y += 0.3;
