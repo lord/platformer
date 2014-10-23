@@ -22,6 +22,9 @@
     requestAnimFrame(animate);
     renderer.render(stage);
     player.rotation += 0.01;
+    world.getCollidingObjects(player, function(other) {
+      console.log(other);
+    });
     // world.position.x += 0.3;
     // world.position.y += 0.3;
   }
