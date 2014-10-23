@@ -2,7 +2,7 @@
   var stage, renderer, cat, world;
   function setupPixi() {
     stage = new PIXI.Stage(0x66FF99);
-    renderer = PIXI.autoDetectRenderer(400, 300);
+    renderer = PIXI.autoDetectRenderer($(window).width(), $(window).height());
     document.body.appendChild(renderer.view);
 
     var texture = PIXI.Texture.fromImage("/img/cat.png");
